@@ -1,0 +1,106 @@
+# Default Configuration
+# ====================
+#
+# These defaults let the agent start handling work orders immediately without
+# any onboarding. They represent safe, conservative, industry-standard choices.
+#
+# The agent uses these values when config.yaml doesn't exist or when a specific
+# field is missing from config.yaml. You never need to edit this file. To
+# customize, create config.yaml (or run the onboarding interview) and override
+# only what you want to change. Anything you don't specify falls back to these.
+#
+# You can customize at any time. Run the onboarding interview, edit config.yaml
+# directly, or just tell the agent "change my NTE to 500" mid-conversation.
+# The agent will update config.yaml and apply the change immediately.
+
+
+company:
+  name: ""
+  phone: ""
+  email: ""
+  escalation_contact:
+    name: ""
+    phone: ""
+    email: ""
+  after_hours_contact:
+    name: ""
+    phone: ""
+    email: ""
+
+# When no jurisdiction is set, the agent asks the tenant what state the
+# property is in on the first work order and uses conservative defaults
+# (shortest response window for each habitability category).
+default_jurisdiction:
+  state: ""
+  city: ""
+  local_ordinance_notes: ""
+
+properties: []
+
+jurisdiction:
+  affordable_housing_rules: false
+  affordable_housing_notes: ""
+  local_overrides: []
+
+emergency:
+  # After-hours lockouts are emergencies, daytime lockouts are urgent.
+  # This is the most common policy across the industry.
+  lockout_policy: "after_hours_emergency"
+  lockout_notes: ""
+  preferred_locksmith: ""
+  business_hours:
+    timezone: "America/New_York"
+    start: "08:00"
+    end: "18:00"
+    days: ["mon", "tue", "wed", "thu", "fri"]
+
+nte:
+  # $500 per work order. Conservative middle ground. Covers most routine
+  # repairs without surprising the owner. Low enough to catch big-ticket
+  # items before they're authorized.
+  default: 500
+  scope: "per_work_order"
+  # $1500 for emergencies. Enough to cover an emergency plumber or HVAC
+  # call without delay.
+  emergency_nte: 1500
+  # Yes, dispatch on Critical/Emergency severity even if the owner is
+  # unreachable. The alternative is a tenant in danger while we wait for a callback.
+  dispatch_on_unreachable_emergency: true
+  pre_approved_categories: []
+
+# When no vendors are configured, the agent asks the PM for a vendor at
+# dispatch time. It can still triage, troubleshoot, and classify without
+# a vendor list. It just can't dispatch autonomously.
+vendors: []
+
+troubleshooting:
+  # Level 3: full standard troubleshooting. Balanced between saving vendor
+  # trips and respecting the tenant's time.
+  default_level: 3
+  property_overrides: []
+
+communication:
+  intake_channels:
+    - "text"
+  response_channel: "match"
+  tone: "warm"
+  languages:
+    - "en"
+  always_include: []
+  never_say: []
+
+tenant_responsibility:
+  lease_source: ""
+  # Industry-standard defaults. Most leases assign these to the tenant.
+  light_bulbs: true
+  smoke_detector_batteries: true
+  hvac_filter_replacement: false
+  minor_drain_clogs: false
+  pest_prevention: false
+  lawn_care: false
+  snow_removal: false
+  dispute_policy: "inform_once_then_escalate"
+  dispute_notes: ""
+
+additional:
+  go_live_immediately: true

@@ -1,0 +1,7 @@
+.DS_Store
+assets/config.yaml
+custom/*
+!custom/README.md
+CLAUDE.md
+NOTES.md
+docs/design-conversation.md

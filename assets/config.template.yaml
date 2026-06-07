@@ -1,0 +1,284 @@
+# Maintenance Coordinator Configuration
+# ======================================
+#
+# This file is populated by the onboarding interview (references/onboarding/setup-interview.md).
+# You can also fill it out manually and the agent will validate it on first run.
+#
+# Save a completed copy as config.yaml in the same directory.
+#
+# Fields marked [REQUIRED] must be filled in before the agent will accept work orders.
+# Fields marked [OPTIONAL] have sensible defaults noted in comments.
+
+
+# ---------------------------------------------------------------------------
+# Section 1: Company Basics
+# ---------------------------------------------------------------------------
+
+company:
+  name: ""                          # Your property management company name
+  phone: ""                         # Company phone number (shown to tenants)
+  email: ""                         # Company email (shown to tenants)
+
+  # Primary contact for escalations. The agent notifies this person when
+  # something needs human attention.
+  # [REQUIRED] At least one escalation contact.
+  escalation_contact:
+    name: ""
+    phone: ""
+    email: ""
+
+  # After-hours escalation contact. If not set, the agent uses the primary
+  # escalation contact for Critical/Emergency severity issues outside business hours.
+  after_hours_contact:
+    name: ""                        # [OPTIONAL] Falls back to escalation_contact
+    phone: ""
+    email: ""
+
+
+# ---------------------------------------------------------------------------
+# Section 2: Properties
+# ---------------------------------------------------------------------------
+# If this section is empty, the agent manages all incoming work orders by
+# default. It will ask for jurisdiction and access details per work order
+# as needed. Adding properties here avoids those extra questions.
+
+# [REQUIRED] Default jurisdiction for habitability law lookup.
+# If all your properties are in one state, set it here and you're done.
+# If properties span multiple states, set the most common one here and
+# override per property below.
+default_jurisdiction:
+  state: ""                         # Two-letter state code, e.g. "CA", "TX"
+  city: ""                          # [OPTIONAL] Only needed if local ordinances are stricter than state law
+  local_ordinance_notes: ""         # [OPTIONAL] Notes on local rules that differ from state defaults
+
+properties: []
+  # Uncomment and copy this block for each property:
+  #
+  # - address: "123 Main St"
+  #   city: "Austin"
+  #   state: "TX"
+  #   zip: "78701"
+  #   unit_count: 4
+  #   jurisdiction:                 # [OPTIONAL] Override default_jurisdiction for this property
+  #     state: "TX"
+  #     city: "Austin"
+  #     local_ordinance_notes: ""
+  #   access:                       # [OPTIONAL] Vendor access instructions
+  #     lockbox_code: ""
+  #     gate_code: ""
+  #     parking_notes: ""
+  #     pet_warnings: ""
+  #     other_notes: ""
+  #   owner:                        # [OPTIONAL] Property owner info, used for approval workflow
+  #     name: ""
+  #     phone: ""
+  #     email: ""
+  #     preferred_vendors: []       # Vendor names/IDs this owner requires
+  #     refused_vendors: []         # Vendor names/IDs this owner refuses
+
+
+# ---------------------------------------------------------------------------
+# Section 3: Jurisdiction and Legal
+# ---------------------------------------------------------------------------
+# Most of this is derived from the property list above. These fields capture
+# anything that goes beyond standard state law.
+
+jurisdiction:
+  # Does the company operate under affordable housing program requirements
+  # or local housing authority rules that affect maintenance response?
+  affordable_housing_rules: false
+  affordable_housing_notes: ""      # [OPTIONAL] Details if true
+
+  # Cities or counties with local ordinances stricter than the state.
+  # The agent defaults to state-level rules. Add overrides here.
+  local_overrides: []
+    # - city: "San Francisco"
+    #   state: "CA"
+    #   notes: "SF has stricter mold response and AC habitability rules"
+
+
+# ---------------------------------------------------------------------------
+# Section 4: Emergency and Lockout Policy
+# ---------------------------------------------------------------------------
+
+emergency:
+  # [REQUIRED] Lockout policy. Pick one:
+  #   "always_emergency"       - all lockouts dispatched immediately
+  #   "after_hours_emergency"  - lockouts are emergency after business hours, urgent during hours
+  #   "after_hours_if_no_safe_option" - only dispatch after hours if tenant has no safe alternative
+  #   "custom"                 - describe in lockout_notes
+  lockout_policy: ""
+
+  lockout_notes: ""                 # [OPTIONAL] Custom lockout instructions or exceptions
+
+  # Preferred locksmith for lockout calls.
+  # Also listed in the vendors section, but called out here so the agent
+  # knows who to reach for this specific scenario.
+  preferred_locksmith: ""           # Vendor name or ID from the vendors list
+
+  # Company-specific "always treat this as an emergency" rules now live in
+  # custom/rules.md, alongside your other house rules (see SKILL.md > Customization).
+  # config.yaml holds settings; plain-English rules are a separate file.
+
+  # Business hours for after-hours determination
+  business_hours:
+    timezone: ""                    # e.g. "America/Chicago"
+    start: "08:00"                  # 24-hour format
+    end: "18:00"
+    days: ["mon", "tue", "wed", "thu", "fri"]
+
+
+# ---------------------------------------------------------------------------
+# Section 5: Not-To-Exceed (NTE) Thresholds
+# ---------------------------------------------------------------------------
+
+nte:
+  # [REQUIRED] Default NTE per work order. The agent can authorize vendor
+  # spend up to this amount without owner approval.
+  default: 0                        # Dollar amount, e.g. 300
+
+  # Whether NTE is applied per work order, per month, or per property.
+  # Most companies use per_work_order.
+  scope: "per_work_order"           # per_work_order | per_month | per_property
+
+  # Separate, higher NTE for Critical and Emergency severity situations.
+  emergency_nte: 0                  # [OPTIONAL] Dollar amount. If 0, uses default.
+
+  # Should the agent dispatch on Critical/Emergency severity situations even if
+  # the cost exceeds emergency_nte and the owner is unreachable?
+  # Recommended: true (with documentation).
+  dispatch_on_unreachable_emergency: true
+
+  # Pre-approved categories. If a repair type is listed here, the agent
+  # dispatches without owner approval as long as the cost is within NTE.
+  pre_approved_categories: []
+    # - "plumbing_under_nte"
+    # - "lockout"
+    # - "smoke_detector_replacement"
+
+
+# ---------------------------------------------------------------------------
+# Section 6: Vendors
+# ---------------------------------------------------------------------------
+# [REQUIRED] At minimum, one vendor in each of these categories:
+#   plumber, electrician, hvac, locksmith
+# The agent cannot handle emergencies without at least those four.
+
+vendors: []
+  # Uncomment and copy this block for each vendor:
+  #
+  # - name: "Mike's Plumbing"
+  #   category: "plumber"           # plumber | electrician | hvac | handyman | locksmith |
+  #                                 # pest_control | mold_remediation | glass | wildlife_removal |
+  #                                 # dryer_vent_cleaning | appliance_repair | general
+  #   phone: ""
+  #   email: ""
+  #   contact_method: "phone"       # phone | text | email | app
+  #   coverage: "all"               # "all" or list of property addresses/IDs
+  #   emergency_available: true     # Can this vendor respond to after-hours emergencies?
+  #   notes: ""                     # Specialties, limitations, owner preferences, etc.
+
+
+# ---------------------------------------------------------------------------
+# Section 7: Troubleshooting Aggressiveness
+# ---------------------------------------------------------------------------
+# How hard the agent tries to resolve issues with the tenant before
+# dispatching a vendor. Higher levels save money but take more tenant time.
+#
+#   0 - never troubleshoot, dispatch immediately
+#   1 - one or two quick questions, then dispatch
+#   2 - light troubleshooting (resets, simple checks, under 5 minutes)
+#   3 - full standard troubleshooting (default, 10-15 minutes)
+#   4 - thorough diagnostics (video, multi-step, 20-30 minutes)
+#   5 - maximum (guided repairs, shipped parts, 30+ minutes)
+
+troubleshooting:
+  default_level: 3                  # [OPTIONAL] Defaults to 3
+
+  # Per-property overrides. Luxury properties might be 0-1.
+  # Cost-sensitive portfolios might be 4-5.
+  property_overrides: []
+    # - property: "123 Main St"
+    #   level: 1
+
+
+# ---------------------------------------------------------------------------
+# Section 8: Communication Preferences
+# ---------------------------------------------------------------------------
+
+communication:
+  # How tenants submit maintenance requests.
+  intake_channels:
+    - "text"                        # text | email | portal | phone | in_person
+  # - "email"
+  # - "portal"
+
+  # How the agent communicates back to tenants.
+  # "match" means use the same channel the tenant used.
+  response_channel: "match"         # match | text | email
+
+  # Tone for tenant communication.
+  #   "warm"        - friendly, casual, plain-spoken (default)
+  #   "professional" - polished but not stiff
+  #   "formal"      - corporate, buttoned-up
+  tone: "warm"
+
+  # Language the agent should use. English is the default. If your tenant
+  # population includes non-English speakers, list additional languages
+  # and the agent will attempt to match the tenant's language.
+  languages:
+    - "en"
+  # - "es"
+
+  # Things the agent should always include or never say.
+  always_include: []
+    # - "Your Property Management Co."     # Always mention company name
+    # - "Work order #{{work_order_id}}"    # Always include WO number
+
+  never_say: []
+    # - "sorry"       # Some companies avoid "sorry" (perceived liability)
+    # - "fault"
+
+
+# ---------------------------------------------------------------------------
+# Section 9: Tenant Responsibility
+# ---------------------------------------------------------------------------
+# These override the defaults in references/decision-logic/tenant-responsibility-matrix.md.
+# If nothing is configured here, the agent uses industry-standard defaults
+# and flags every responsibility decision for human review.
+
+tenant_responsibility:
+  # Source of truth. If you uploaded a lease during onboarding, note it here.
+  lease_source: ""                  # [OPTIONAL] e.g. "standard_lease_2024.pdf"
+
+  # Individual responsibility assignments. true = tenant-responsible.
+  # Omit or set to null to use the default from the responsibility matrix.
+  light_bulbs: null                 # Tenant-accessible fixtures
+  smoke_detector_batteries: null
+  hvac_filter_replacement: null
+  minor_drain_clogs: null           # Single-fixture clogs (hair, grease)
+  pest_prevention: null             # Cleanliness-related pest prevention
+  lawn_care: null
+  snow_removal: null
+
+  # How the agent handles responsibility disputes.
+  # "inform_once_then_escalate" (default) - tell the tenant once, escalate if they push back
+  # "always_dispatch" - never argue, always dispatch, sort billing later
+  # "custom" - describe in dispute_notes
+  dispute_policy: "inform_once_then_escalate"
+  dispute_notes: ""
+
+
+# ---------------------------------------------------------------------------
+# Section 10: Additional Configuration
+# ---------------------------------------------------------------------------
+
+additional:
+  # NOTE: Plain-English house rules, quirks, and "always an emergency" rules do
+  # NOT go here. They live in custom/rules.md (a separate, agent-writable file).
+  # config.yaml is for structured settings only. See SKILL.md > Customization.
+
+  # Should the agent start handling work orders immediately after setup,
+  # or wait for the user to run test scenarios first?
+  # Recommended: false (run tests first using evals/).
+  go_live_immediately: false
