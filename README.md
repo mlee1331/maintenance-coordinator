@@ -61,6 +61,7 @@ See `docs/architecture.md` for the full overlay design.
 maintenance-coordinator-skill/
 ├── SKILL.md                    # Required entry point (Agent Skills spec)
 ├── README.md                   # This file
+├── AGENTS.md                   # Guidance for coding agents working in this repo
 ├── LICENSE                     # AGPL-3.0
 ├── references/                 # Loaded on demand by the agent
 │   ├── knowledge-base/         # Categorized troubleshooting entries
@@ -69,9 +70,8 @@ maintenance-coordinator-skill/
 │   └── schemas/                # Data structure definitions
 ├── custom/                     # Your overrides (gitignored, mirrors references/)
 ├── assets/                     # User-customizable templates
-│   ├── config.template.yaml
-│   └── examples/
-├── scripts/                    # Optional Python utilities (v0.2+)
+│   ├── config.defaults.yaml    # Shipped defaults (do not edit; copy to config.yaml)
+│   └── config.template.yaml    # Annotated starting point for your config.yaml
 ├── evals/                      # Test cases for validation
 └── docs/                       # Adoption, contributing, architecture
 ```
