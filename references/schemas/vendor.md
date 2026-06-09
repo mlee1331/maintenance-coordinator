@@ -14,7 +14,7 @@ Information about a maintenance vendor. Vendors are added during onboarding (con
 
 ### Trade
 
-- **category**: Primary trade category. One of: handyman, plumber, electrician, hvac, locksmith, pest_control, mold_remediation, glass, wildlife_removal, dryer_vent_cleaning, appliance_repair, general. A vendor can have multiple categories (a handyman who also does basic plumbing).
+- **category**: Primary trade category. One of: handyman, plumber, electrician, hvac, locksmith, pest_control, mold_remediation, glass, garage_door, roofing, wildlife_removal, dryer_vent_cleaning, appliance_repair, landscaping, general. A vendor can have multiple categories (a handyman who also does basic plumbing).
 - **additional_categories**: Other trades this vendor can handle, if applicable.
 - **specialties**: Free text. Specific things this vendor is known for ("water heater installs", "commercial HVAC", "older building plumbing"). Helps with matching.
 - **limitations**: Things this vendor doesn't handle despite their category. "Plumber but doesn't do sewer lines." "Electrician but won't touch panels over 200A."

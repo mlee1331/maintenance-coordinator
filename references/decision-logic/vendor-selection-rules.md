@@ -36,6 +36,9 @@ Use a licensed plumber, electrician, or HVAC tech when:
 - **Glass company**: window glass replacement, sealed unit (double-pane) failures
 - **Wildlife removal**: raccoons, bats, squirrels (separate from pest control)
 - **Dryer vent cleaning service**: dedicated vent cleaning with specialized equipment
+- **Garage door company**: garage door springs, cables, openers, off-track or broken doors. High-tension spring and cable work is a safety job beyond handyman scope — dispatch a dedicated garage door company. A handyman may handle a loose panel, weather seal, or a remote/battery swap.
+- **Landscaping / grounds**: lawn mowing, overgrowth, tree and shrub trimming, leaf and debris removal, seasonal cleanup, and snow removal where applicable. Use for routine grounds upkeep, not for irrigation/sprinkler plumbing (that is a plumber) or exterior structural work.
+- **Roofing company**: roof leaks, missing/lifted/damaged shingles or tiles, flashing, and roof-tied gutters. Roof work is a licensed specialty and is not a handyman job; it frequently exceeds NTE, so get owner approval per `owner-approval-rules.md` unless an active leak makes it an emergency.
 
 ## Selection Within a Category
 

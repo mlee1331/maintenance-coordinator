@@ -169,8 +169,9 @@ vendors: []
   #
   # - name: "Mike's Plumbing"
   #   category: "plumber"           # plumber | electrician | hvac | handyman | locksmith |
-  #                                 # pest_control | mold_remediation | glass | wildlife_removal |
-  #                                 # dryer_vent_cleaning | appliance_repair | general
+  #                                 # pest_control | mold_remediation | glass | garage_door |
+  #                                 # roofing | wildlife_removal | dryer_vent_cleaning |
+  #                                 # appliance_repair | landscaping | general
   #   phone: ""
   #   email: ""
   #   contact_method: "phone"       # phone | text | email | app
