@@ -24,7 +24,7 @@ This is the **backend common layer** — these rules apply to every property man
 | **Interior/Cosmetic** | Handyman | Paint, drywall, tile, flooring, carpet, cabinets, trim. **Caulking is General, not Interior/Cosmetic** — caulking comes up too often as standalone handyman work. |
 | **Tenant Complaint** | No vendor needed | Noise complaints, smoking complaints, neighbor disputes. Route to office. |
 | **Property/Common Area** | Property staff or appropriate trade | Parking, dumpsters, trash, shared-area issues. |
-| **Administrative** | No vendor needed | Insurance questions, billing, pet applications, lease questions. Route to office. |
+| **Administrative** | No vendor needed | Insurance questions, billing, pet applications, lease questions, and **access/coordination** requests — the resident needs to be let into a locked or restricted space (basement, storage, utility/mechanical room) and the underlying task is tenant-doable or just needs entry. Route to office; no trade dispatch. (If a trade is genuinely needed once inside, categorize that trade and note the access need.) |
 | **Needs More Information** | None yet | The original report alone is genuinely ambiguous and cannot be routed to a trade without more information. Do not guess. Ask the tenant a clarifying question first, then categorize. See "Diagnose from the original report only" below. |
 | **Multiple** | Escalate — a human coordinates the trades | A multi-item work order whose distinct items require **two or more different vendor types** (e.g. a handyman task plus a plumber task). It is not a single automated dispatch — one person must coordinate the separate vendors, sequencing, and any owner approval. Set `escalate=true` and `multi_item=true`, set `vendor_type` to `multiple`, and list every item with the trade it needs. A multi-item WO whose items are all **one** trade does NOT use this — classify it by that trade (see the multi-item rule below). |
 
@@ -218,6 +218,11 @@ See the changelog at the bottom of this file for the lineage of each rule.
     name misrouted a UV-lamp swap to Plumbing; the task (routine
     filter/lamp replacement) is General. Categorize on the task, not the
     company name in the text.
+  - The real task can be **access, not a repair.** "A breaker tripped but
+    we can't get into the basement where the panel is" → the blocker is
+    basement access, which the resident can handle once let in →
+    **Administrative** (office arranges access), not Electrical. Route on
+    the actual task.
   - Structural/Exterior trade fix: there is no standing carpenter or
     general contractor. Minor exterior/structural repairs go to the
     in-house handyman; major work (full deck/roof/siding replacement,
