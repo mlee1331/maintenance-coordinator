@@ -22,7 +22,7 @@ What this entry covers. Be specific. List the variants. Then state what this ent
 
 ## Intake questions for tenant
 
-Numbered list of questions to ask. Include a classification check note if certain answers change the severity level (e.g., "if there is standing water near electricity, reclassify as Critical").
+Numbered list of questions to ask. Include a classification check note if certain answers change the severity level (e.g., "if there is standing water near electricity, reclassify as Emergency").
 
 ## Diagnostic decision tree
 

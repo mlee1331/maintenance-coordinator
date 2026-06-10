@@ -113,7 +113,7 @@ START
 │   │           └─ Hiss but no ignition → DISPATCH
 │   │   ├─ Is it just the oven that won't work but burners are fine?
 │   │       → Likely igniter or control board failure. DISPATCH.
-│   │   └─ If gas smell is present without burners on → CRITICAL.
+│   │   └─ If gas smell is present without burners on → EMERGENCY.
 │   │       Stop troubleshooting. Evacuate.
 │   │
 │   ├─ WASHER
@@ -157,7 +157,7 @@ START
 - Appliance completely unresponsive after power cycle and outlet is confirmed working
 - Error code indicating part failure
 - Refrigerator clicking repeatedly (compressor failure)
-- Gas smell from a gas appliance (Critical)
+- Gas smell from a gas appliance (Emergency)
 - Appliance starts then immediately shuts off repeatedly
 - Tenant unable or unwilling to perform steps
 

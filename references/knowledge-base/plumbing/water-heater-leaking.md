@@ -24,7 +24,7 @@ last_reviewed: 2026-05-05
 - Water heater in a closet or pan and the pan is full of water
 - Water damage on floor near the water heater
 
-Does NOT cover: no hot water without a leak (see KB-PLUMB-004), water heater making noises but not leaking (sediment buildup, schedule flush), gas smell near water heater (Critical severity, dispatch immediately).
+Does NOT cover: no hot water without a leak (see KB-PLUMB-004), water heater making noises but not leaking (sediment buildup, schedule flush), gas smell near water heater (Emergency severity, dispatch immediately).
 
 ## Intake questions for tenant
 
@@ -46,7 +46,7 @@ Does NOT cover: no hot water without a leak (see KB-PLUMB-004), water heater mak
 START
 │
 ├─ Is there a GAS SMELL?
-│   └─ STOP. Critical. Advise tenant to leave. DISPATCH immediately.
+│   └─ STOP. Emergency. Advise tenant to leave. DISPATCH immediately.
 │
 ├─ Is the leak from the BOTTOM of the tank?
 │   └─ The tank has likely corroded internally. This is not repairable.

@@ -1,6 +1,6 @@
 # Emergency Classification
 
-> **Note:** This file is retained as a detailed reference for life-safety (Critical) classification criteria. The primary severity classification system is now in `severity-classification.md`.
+> **Note:** This file is retained as a detailed reference for life-safety (Emergency) classification criteria. The primary severity classification system is now in `severity-classification.md`.
 
 How to classify the emergency level of every incoming work order. Run this classification on every intake, no exceptions. The result determines whether triage is attempted and how fast to dispatch.
 

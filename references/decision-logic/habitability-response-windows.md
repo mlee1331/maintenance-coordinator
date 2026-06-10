@@ -44,18 +44,18 @@ Most states require heat to be restored "within a reasonable time." In practice:
 - **24 hours or less**: California, New York, Massachusetts, Illinois, New Jersey, Connecticut, Maryland, Washington DC, Minnesota, Wisconsin
 - **48 hours**: Most other states with explicit timelines
 - **"Reasonable time" (no specific hours)**: Many southern states where heating emergencies are less common
-- **Override**: If outdoor temperature is at or below freezing, treat as Critical (life-safety) regardless of jurisdiction. Don't wait for a habitability clock.
+- **Override**: If outdoor temperature is at or below freezing, treat as Emergency (life-safety) regardless of jurisdiction. Don't wait for a habitability clock.
 
 ### Hot Water
 
 - **24 hours**: California, New York, Massachusetts, Illinois, New Jersey, Connecticut, Washington DC
 - **48 hours**: Most other states
-- **Override**: None. Hot water loss is never Critical, but it is always High severity (habitability).
+- **Override**: None. Hot water loss is never Emergency, but it is always High severity (habitability).
 
 ### Plumbing (No Working Toilet)
 
 - **24 hours**: Most jurisdictions treat a single-toilet unit with no working toilet as requiring prompt repair
-- **Override**: If there are multiple toilets and at least one works, this drops to Low severity. If sewage is backing up, reclassify as Critical (life-safety).
+- **Override**: If there are multiple toilets and at least one works, this drops to Low severity. If sewage is backing up, reclassify as Emergency (life-safety).
 
 ### Exterior Door Security
 

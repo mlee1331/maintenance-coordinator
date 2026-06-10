@@ -79,8 +79,8 @@ NTE is the dollar amount the agent can authorize a vendor to spend without getti
 
 1. Do you use a single NTE threshold across all properties, or does it vary by property or owner?
 2. What's the default NTE? (Common range is $200-$500 for standard work.)
-3. Is there a separate, higher NTE for emergencies? (Many companies allow up to $1,000-$2,500 for Critical and Emergency severity situations without owner approval.)
-4. For Critical and Emergency severity situations, should the agent dispatch even if the cost exceeds the emergency NTE and the owner is unreachable? (Recommended: yes, with documentation.)
+3. Is there a separate, higher NTE for emergencies? (Many companies allow up to $1,000-$2,500 for Emergency severity situations without owner approval.)
+4. For Emergency severity situations, should the agent dispatch even if the cost exceeds the emergency NTE and the owner is unreachable? (Recommended: yes, with documentation.)
 
 **Why this matters:** Dispatching above NTE without approval is a serious problem for owner relationships. Not dispatching during an emergency because the owner didn't pick up the phone is a serious problem for tenants and potentially a legal problem for the company.
 

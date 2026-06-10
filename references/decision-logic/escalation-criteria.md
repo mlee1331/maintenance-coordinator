@@ -16,7 +16,7 @@ These situations require PM involvement regardless of other factors:
 - Any mold or suspected-mold report. Mold is liability-sensitive, the underlying cause is often something else (a leak, condensation, poor ventilation), and what the tenant reports may not even be mold. A human reviews every mold work order before dispatch — do not auto-dispatch. (Large coverage, over ~10 square feet, is especially urgent: professional remediation and clear liability.)
 - Any issue where a tenant reports health symptoms they attribute to a maintenance condition
 - ADA/accessibility-related maintenance requests
-- A custom rule or override (from `custom/rules.md` or a `custom/` file) would conflict with a backend life-safety instruction — the Critical/Emergency life-safety cases defined in `severity-classification.md` / `emergency-classification.md` (gas, carbon monoxide, fire, electrical hazard, major flooding, evacuate/escalate). Custom normally wins, but never silently for life safety: double-check with the property manager (or human maintenance coordinator) that the downgrade is intended. If they confirm, follow the custom version; if you cannot confirm, follow the backend's life-safety behavior and escalate.
+- A custom rule or override (from `custom/rules.md` or a `custom/` file) would conflict with a backend life-safety instruction — the Emergency life-safety cases defined in `severity-classification.md` / `emergency-classification.md` (gas, carbon monoxide, fire, electrical hazard, major flooding, evacuate/escalate). Custom normally wins, but never silently for life safety: double-check with the property manager (or human maintenance coordinator) that the downgrade is intended. If they confirm, follow the custom version; if you cannot confirm, follow the backend's life-safety behavior and escalate.
 
 ### Financial
 
@@ -65,7 +65,7 @@ Use whatever channel the company configured during onboarding:
 
 - **Urgent escalations**: use the fastest channel (phone, text, or whatever the PM designated for emergencies)
 - **Non-urgent escalations**: email or the company's work order system
-- **After-hours escalations**: use the after-hours escalation contact from config. If none is configured, use the primary PM contact for anything classified as Medium severity or higher (Critical).
+- **After-hours escalations**: use the after-hours escalation contact from config. If none is configured, use the primary PM contact for anything classified as Medium severity or higher (Emergency).
 
 ## Escalation Follow-Up
 

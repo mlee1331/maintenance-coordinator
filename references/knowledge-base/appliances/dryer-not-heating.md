@@ -83,7 +83,7 @@ START
 │   │           └─ If it heats → RESOLVED
 │   │       └─ If on and still no heat → DISPATCH. (Gas valve solenoid
 │   │           or igniter failure. Not tenant-fixable.)
-│   ├─ Can the tenant smell gas? → CRITICAL. Stop. Advise tenant to
+│   ├─ Can the tenant smell gas? → EMERGENCY. Stop. Advise tenant to
 │   │   leave. Dispatch immediately.
 │
 ├─ Is the dryer OVERLOADED?
@@ -118,7 +118,7 @@ START
 - Gas dryer with valve on but no heat (igniter/solenoid failure)
 - Thermal fuse tripped (dryer shuts off mid-cycle, vent is clear)
 - Lint trap clean, settings correct, breaker good, and still no heat
-- Gas smell (Critical)
+- Gas smell (Emergency)
 - Tenant unable or unwilling to perform steps
 
 ## Vendor category to dispatch

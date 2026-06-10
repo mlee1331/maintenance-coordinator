@@ -24,7 +24,7 @@ last_reviewed: 2026-05-05
 - Sink completely stopped up (standing water)
 - Multiple drains slow at the same time
 
-Does NOT cover: toilet clogs (see KB-PLUMB-002), sewage backing up into the unit (Critical severity), drains making gurgling sounds with no slow drainage (possible vent issue, dispatch directly), water backing up into a different fixture than the one being used (main line issue, dispatch directly).
+Does NOT cover: toilet clogs (see KB-PLUMB-002), sewage backing up into the unit (Emergency severity), drains making gurgling sounds with no slow drainage (possible vent issue, dispatch directly), water backing up into a different fixture than the one being used (main line issue, dispatch directly).
 
 ## Intake questions for tenant
 

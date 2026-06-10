@@ -122,8 +122,8 @@ See `references/decision-logic/escalation-criteria.md`.
 **After-hours acknowledgment**:
 "Hi [name], I got your message. I know it's after hours but I'm looking into this now."
 
-**Critical immediate**:
+**Emergency immediate**:
 "I'm sending emergency [vendor type] right now. In the meantime, [immediate safety instruction]. They should be there within [timeframe]."
 
-**Urgent but not Critical after hours**:
+**Urgent but not Emergency after hours**:
 "I've got this flagged as urgent. I'm working on getting someone out as soon as possible. I'll update you as soon as I have a confirmed time."

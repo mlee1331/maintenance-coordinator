@@ -35,7 +35,7 @@ Does NOT cover: tenant locked out of building common area (contact building mana
 5. Is there a security concern? (Broken lock on exterior door means anyone could enter.)
 
 **Classification check**: Check the company's configured lockout policy in `assets/config.yaml`. Classification depends on company policy and circumstances:
-- After-hours lockout with no safe alternative → may be Critical per company policy
+- After-hours lockout with no safe alternative → may be Emergency per company policy
 - Daytime lockout → typically Medium
 - Broken exterior lock that compromises security → Medium to High depending on time of day
 - Lock malfunction but tenant is inside → standard

@@ -35,7 +35,7 @@ If the harness or PM software has its own work order format, map these fields to
 - **category**: Top-level category (plumbing, electrical, hvac, appliances, general).
 - **subcategory**: More specific (toilet, faucet, breaker, disposal, mold, lock, etc.).
 - **kb_entry_id**: The KB entry used for triage, if one was matched (e.g., KB-PLUMB-002).
-- **severity**: Severity classification level (critical, high, medium, low, cosmetic). From `references/decision-logic/severity-classification.md`.
+- **severity**: Severity classification level (emergency, high, medium, low, cosmetic). From `references/decision-logic/severity-classification.md`.
 - **habitability_issue**: Whether this is a habitability concern (true/false).
 - **habitability_deadline**: If habitability, the response deadline based on jurisdiction lookup. ISO 8601 timestamp or relative description.
 - **jurisdiction**: State (and city if relevant) for this property. Used for habitability window lookup.

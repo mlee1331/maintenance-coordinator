@@ -24,7 +24,7 @@ last_reviewed: 2026-05-05
 - Smoke detector chirps after battery replacement
 - Multiple smoke detectors chirping at once
 
-Does NOT cover: smoke detector sounding a full continuous alarm with actual smoke (that's a fire, call 911), smoke detector completely non-functional/silent (dispatch for replacement, habitability concern if unit has no working detectors), CO detector alarm (different device, treat as Critical).
+Does NOT cover: smoke detector sounding a full continuous alarm with actual smoke (that's a fire, call 911), smoke detector completely non-functional/silent (dispatch for replacement, habitability concern if unit has no working detectors), CO detector alarm (different device, treat as Emergency).
 
 ## Intake questions for tenant
 
@@ -36,7 +36,7 @@ Does NOT cover: smoke detector sounding a full continuous alarm with actual smok
 
 **Classification check**: If a tenant with no working smoke detector in the unit cannot resolve the chirping, this becomes a habitability concern. Most jurisdictions require functioning smoke detectors. Dispatch within 48 hours for replacement or repair. If the tenant has removed the battery to stop the chirping and now has no working detector, urgency increases.
 
-If it's a CO detector (usually says "CO" on it), and it's alarming continuously, treat as Critical. Tell tenant to leave and call 911.
+If it's a CO detector (usually says "CO" on it), and it's alarming continuously, treat as Emergency. Tell tenant to leave and call 911.
 
 ## Diagnostic decision tree
 

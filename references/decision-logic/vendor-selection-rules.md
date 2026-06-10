@@ -63,11 +63,11 @@ When multiple vendors of the same type are available, select based on:
 
 ### Emergency Dispatch
 
-For Critical and High severity issues:
+For Emergency and High severity issues:
 
 - Use the company's designated emergency vendor for that trade. This is configured during onboarding.
 - Emergency vendors are often more expensive (after-hours rates, priority fees). That's acceptable for emergencies.
-- Do not wait for NTE approval on Critical (life-safety) issues. Dispatch and notify the PM.
+- Do not wait for NTE approval on Emergency (life-safety) issues. Dispatch and notify the PM.
 - For High severity (habitability) issues, check whether the NTE threshold covers the likely cost. If it does, dispatch. If it might not, dispatch anyway and flag for PM.
 
 ### Standard Dispatch
@@ -84,7 +84,7 @@ Before dispatching, check the company's NTE threshold (configured during onboard
 
 - If the expected repair cost is within NTE: dispatch without owner approval
 - If the expected cost might exceed NTE: dispatch but flag in the work order that owner approval may be needed before the vendor proceeds with the full repair
-- If the issue is clearly going to exceed NTE (e.g., water heater replacement, major HVAC repair): get owner approval before dispatching unless it's Critical or High severity
+- If the issue is clearly going to exceed NTE (e.g., water heater replacement, major HVAC repair): get owner approval before dispatching unless it's Emergency or High severity
 
 See `owner-approval-rules.md` for the full approval workflow.
 

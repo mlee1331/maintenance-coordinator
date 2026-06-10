@@ -35,7 +35,7 @@ Does NOT cover: condensation on ceiling (humidity issue, not a leak), old water 
 5. Do you have an upstairs neighbor? If so, can you hear water running up there?
 6. Did this start suddenly or have you noticed a growing stain?
 
-**Classification check**: If water is coming through or near a light fixture or electrical outlet, classify as Critical (water + electricity). Tell the tenant to turn off that circuit at the breaker and do not use the fixture. Dispatch immediately.
+**Classification check**: If water is coming through or near a light fixture or electrical outlet, classify as Emergency (water + electricity). Tell the tenant to turn off that circuit at the breaker and do not use the fixture. Dispatch immediately.
 
 If water is actively flowing (not just dripping), classify as urgent minimum. Risk of significant property damage escalates fast.
 
@@ -45,7 +45,7 @@ If water is actively flowing (not just dripping), classify as urgent minimum. Ri
 START
 │
 ├─ Is water coming through or near a LIGHT FIXTURE or OUTLET?
-│   └─ Yes → CRITICAL. Tell tenant to turn off that circuit at the
+│   └─ Yes → EMERGENCY. Tell tenant to turn off that circuit at the
 │       breaker. Do NOT use the fixture. DISPATCH immediately.
 │
 ├─ Is the ceiling BULGING or BUBBLING?
@@ -137,7 +137,7 @@ Never tenant-responsible for the reporting tenant (the one with water coming thr
 
 ## Notes for coordinator agent
 
-- Always ask about proximity to electrical. Water through a light fixture is Critical severity that tenants often underestimate.
+- Always ask about proximity to electrical. Water through a light fixture is Emergency severity that tenants often underestimate.
 - In multifamily, this is a two-unit coordination problem. The vendor needs access to the reporting unit AND the unit above. Make sure access instructions and contact info for both units are in the work order.
 - If the upstairs unit's tenant is not home and the property has no lockbox/key access, escalate to the property manager for emergency access authorization.
 - Ceiling leaks get worse fast. A "slow drip" can become a stream in hours if the source isn't stopped. Err toward faster dispatch.

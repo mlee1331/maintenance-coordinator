@@ -23,7 +23,7 @@ last_reviewed: 2026-05-05
 - Water is lukewarm but never gets hot
 - Hot water works at some fixtures but not others
 
-Does NOT cover: water heater leaking (dispatch directly, risk of water damage), water heater making popping/banging noises (dispatch, sediment buildup), gas smell near water heater (Critical severity, dispatch immediately and advise tenant to leave).
+Does NOT cover: water heater leaking (dispatch directly, risk of water damage), water heater making popping/banging noises (dispatch, sediment buildup), gas smell near water heater (Emergency severity, dispatch immediately and advise tenant to leave).
 
 ## Intake questions for tenant
 
@@ -35,7 +35,7 @@ Does NOT cover: water heater leaking (dispatch directly, risk of water damage), 
 
 **Classification check**: No hot water is a High severity (habitability) issue in all US jurisdictions. Check `habitability-response-windows.md` for the required response time. Most states require restoration within 24-48 hours. Some are shorter. If the response window is tight, dispatch immediately without triage.
 
-If the tenant reports a gas smell near the water heater, reclassify as Critical immediately.
+If the tenant reports a gas smell near the water heater, reclassify as Emergency immediately.
 
 ## Diagnostic decision tree
 
@@ -43,7 +43,7 @@ If the tenant reports a gas smell near the water heater, reclassify as Critical 
 START
 │
 ├─ Is there a GAS SMELL near the water heater?
-│   └─ Yes → STOP. Critical. Do not troubleshoot. Tell tenant to
+│   └─ Yes → STOP. Emergency. Do not troubleshoot. Tell tenant to
 │       leave, do not flip switches. Dispatch immediately.
 │
 ├─ Is it just ONE FIXTURE with no hot water?
@@ -131,7 +131,7 @@ START
 
 ## When to dispatch
 
-- Gas smell (Critical, immediate)
+- Gas smell (Emergency, immediate)
 - Breaker trips repeatedly (electrical fault)
 - No pilot and tenant uncomfortable relighting
 - Pilot is lit but no hot water (thermostat/gas valve issue)
@@ -161,7 +161,7 @@ Never tenant-responsible. Water heater maintenance and replacement are always ow
 - Whether it's total loss of hot water or partial (one fixture vs. all)
 - What tenant tried (breaker, gas valve, pilot, power cycle)
 - Any error codes (tankless)
-- Whether there's a gas smell (Critical reclassification)
+- Whether there's a gas smell (Emergency reclassification)
 - Whether the heater is leaking (separate issue, see KB-PLUMB-009)
 - Age of unit if visible
 - Whether this is shared with other units

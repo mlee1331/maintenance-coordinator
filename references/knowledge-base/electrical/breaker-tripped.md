@@ -24,7 +24,7 @@ last_reviewed: 2026-05-05
 - Breaker keeps tripping after being reset
 - GFCI outlet tripped and won't reset
 
-Does NOT cover: entire unit has no power (check with utility company first, then dispatch), sparking or burning smell from outlets or panel (Critical severity, dispatch immediately), flickering lights throughout the unit (possible loose neutral, dispatch immediately), tenant needs something moved or added in the panel (always dispatch, never tenant work).
+Does NOT cover: entire unit has no power (check with utility company first, then dispatch), sparking or burning smell from outlets or panel (Emergency severity, dispatch immediately), flickering lights throughout the unit (possible loose neutral, dispatch immediately), tenant needs something moved or added in the panel (always dispatch, never tenant work).
 
 ## Intake questions for tenant
 
@@ -33,7 +33,7 @@ Does NOT cover: entire unit has no power (check with utility company first, then
 3. Do you have access to your breaker panel? Do you know where it is?
 4. Are there any burning smells, scorch marks, or warmth around any outlets or the panel?
 
-**Classification check**: If the tenant reports burning smell, scorch marks, warmth from outlets or the panel, sparking, or any smoke, this is Critical severity. Do not triage. Dispatch immediately and advise tenant not to touch the panel.
+**Classification check**: If the tenant reports burning smell, scorch marks, warmth from outlets or the panel, sparking, or any smoke, this is Emergency severity. Do not triage. Dispatch immediately and advise tenant not to touch the panel.
 
 If the entire unit is dark, ask the tenant to check whether neighbors also lost power (possible utility outage). If it's just their unit, dispatch an electrician.
 
@@ -43,7 +43,7 @@ If the entire unit is dark, ask the tenant to check whether neighbors also lost 
 START
 │
 ├─ Is there a BURNING SMELL, scorch marks, or outlet warm to touch?
-│   └─ Yes → STOP. Critical. DISPATCH immediately. Tell tenant
+│   └─ Yes → STOP. Emergency. DISPATCH immediately. Tell tenant
 │       not to use affected outlets and to stay away from the panel.
 │
 ├─ Is the ENTIRE UNIT without power?
@@ -106,7 +106,7 @@ START
 
 ## When to dispatch
 
-- Burning smell, scorch marks, or warmth from outlets or panel (Critical)
+- Burning smell, scorch marks, or warmth from outlets or panel (Emergency)
 - Breaker trips again immediately after reset (do not ask tenant to reset more than once)
 - GFCI won't reset or keeps popping
 - Entire unit without power and main breaker won't hold

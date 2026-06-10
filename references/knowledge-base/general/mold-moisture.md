@@ -41,7 +41,7 @@ Does NOT cover: mold in HVAC system (dispatch HVAC specialist), mold caused by a
 6. Does the bathroom have a working exhaust fan? Do you use it during showers?
 7. How long has it been there? Is it growing or stable?
 
-**Classification check**: Mold is almost never Critical, but it IS health-sensitive and potentially a High severity (habitability) issue depending on jurisdiction, extent, and tenant health conditions.
+**Classification check**: Mold is almost never Emergency, but it IS health-sensitive and potentially a High severity (habitability) issue depending on jurisdiction, extent, and tenant health conditions.
 - Large area of mold (more than 10 sq ft) → escalate to PM. Professional remediation may be needed. Do not dispatch a handyman for large-scale mold.
 - Tenant reports health symptoms (respiratory issues, allergic reactions) → urgent. Treat with priority.
 - Small bathroom mold on grout/caulking → likely routine, but the agent still escalates first; the human may then route it as standard maintenance.

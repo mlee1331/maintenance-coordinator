@@ -24,7 +24,7 @@ last_reviewed: 2026-05-05
 - Heat comes on but blows cold air
 - Baseboard/radiator heat not working
 
-Does NOT cover: heat works but is uneven (that's a distribution issue), heat pump making unusual noises while running (that's a mechanical issue, dispatch directly), gas smell (that's Critical, dispatch immediately and advise tenant to leave).
+Does NOT cover: heat works but is uneven (that's a distribution issue), heat pump making unusual noises while running (that's a mechanical issue, dispatch directly), gas smell (that's Emergency, dispatch immediately and advise tenant to leave).
 
 ## Intake questions for tenant
 
@@ -34,7 +34,7 @@ Does NOT cover: heat works but is uneven (that's a distribution issue), heat pum
 4. Is anything happening at all when the thermostat calls for heat? (Fan running, clicking sounds, nothing.)
 5. What's the current outdoor temperature?
 
-**Classification check**: If outdoor temperature is at or below 32F and there is no heat at all, classify as Critical per `severity-classification.md`. Do not triage. Dispatch immediately.
+**Classification check**: If outdoor temperature is at or below 32F and there is no heat at all, classify as Emergency per `severity-classification.md`. Do not triage. Dispatch immediately.
 
 If outdoor temperature is below 55F during heating season (generally October through April), classify as High. Check `habitability-response-windows.md` for the jurisdiction's required response time.
 
@@ -133,7 +133,7 @@ START
 - Furnace makes no response to any troubleshooting
 - Furnace starts then shuts down within seconds (short cycling)
 - Heat pump outdoor unit completely iced over
-- Tenant reports gas smell at any point (reclassify as Critical immediately)
+- Tenant reports gas smell at any point (reclassify as Emergency immediately)
 - Furnace is making banging, popping, or screeching sounds
 - Tenant unable or unwilling to perform steps
 
@@ -163,7 +163,7 @@ Never tenant-responsible for heating system failure. Filter replacement responsi
 - What tenant tried (thermostat, breaker, filter, furnace switch, gas valve, pilot)
 - Current indoor temperature
 - Current outdoor temperature
-- Whether there's a gas smell (Critical reclassification)
+- Whether there's a gas smell (Emergency reclassification)
 - Whether this is a repeat call for the same issue
 - Tenant availability (for emergency heat issues, vendor may need to come regardless)
 

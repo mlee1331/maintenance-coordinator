@@ -34,10 +34,10 @@ Ask these once you know it's a plumbing issue but haven't pinpointed the specifi
 
 ## Electrical
 
-- **Is anything sparking, smoking, or hot to the touch?** Safety screen. If yes, this is Critical. Tell them to stop touching it and potentially leave the area.
+- **Is anything sparking, smoking, or hot to the touch?** Safety screen. If yes, this is Emergency. Tell them to stop touching it and potentially leave the area.
 - **What stopped working?** One outlet, one room, the whole unit, or specific appliances.
 - **Did you check the breaker panel?** Many electrical issues are tripped breakers. If the tenant hasn't checked, walk them through it before asking more questions.
-- **Are there any burning smells?** Another safety screen. Burning smell plus electrical issue is Critical.
+- **Are there any burning smells?** Another safety screen. Burning smell plus electrical issue is Emergency.
 - **Did anything happen before it stopped working?** Plugging in a new appliance, a storm, a loud pop. Helps identify cause.
 
 ## HVAC
@@ -67,7 +67,7 @@ Ask these once you know it's a plumbing issue but haven't pinpointed the specifi
 
 Stop asking intake questions and move to action when:
 
-- You've identified a Critical issue. Act immediately.
+- You've identified a Emergency issue. Act immediately.
 - You've identified a High severity issue with a tight response window. Dispatch, don't diagnose.
 - The tenant is frustrated with questions. If they've answered 4+ questions and you still aren't sure, dispatch and let the vendor diagnose on-site.
 - You have enough to classify and route. You don't need to know everything before dispatching. You need to know enough to send the right vendor with the right urgency.

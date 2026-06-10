@@ -112,14 +112,13 @@ Do not skip the guide. The category you assign here drives severity, responsibil
 
 Run every intake through `references/decision-logic/severity-classification.md`. Classify as one of:
 
-- **Critical**: immediate risk to life, health, or safety. Fire, gas leak, CO alarm, flooding with electrical exposure, sewage in living space, no heat at or below freezing. Dispatch immediately, advise tenant on safety (evacuate, call 911 if appropriate), notify PM.
-- **Emergency**: something is actively going wrong and delay makes it worse. Burst pipe (even if shut off), active roof leak, water heater rupture, sump pump failure, exterior door that can't be secured. Dispatch immediately, no owner approval needed.
+- **Emergency**: the top, immediate-response level — either an immediate risk to life, health, or safety (fire, gas leak, CO alarm, flooding with electrical exposure, sewage in living space, sparking/burning outlets, structural collapse, no heat at or below freezing), or something actively going wrong where delay makes it worse (burst pipe even if shut off, water pouring from a ceiling, active roof leak, water heater rupture, sump pump failure, exterior door that can't be secured). Dispatch immediately, no owner approval. When life-safety is involved, advise the tenant (evacuate, call 911 if appropriate) and notify PM.
 - **High**: habitability compromised or at risk. No heat in heating season, no hot water, no running water, no working toilet (single-toilet unit), refrigerator failure, broken exterior lock. Dispatch within the legal response window for the jurisdiction. See `references/decision-logic/habitability-response-windows.md`.
 - **Medium**: significant inconvenience or risk of property damage within 24-48 hours. AC out in high heat (non-habitability jurisdiction), slow active leak, active pest infestation, one broken window with weather exposure.
 - **Low**: normal maintenance, schedulable within 3-7 business days. Dripping faucet, running toilet, cabinet door off hinge, garbage disposal jammed without standing water.
 - **Cosmetic**: no functional impact, purely appearance. Paint touch-ups, grout discoloration, weatherstripping wear. Schedule at convenience, batch with other work.
 
-Severity determines whether triage is attempted and how quickly to dispatch. Critical and Emergency skip triage and go straight to dispatch. High skips triage if the response window is tight.
+Severity determines whether triage is attempted and how quickly to dispatch. Emergency skips triage and goes straight to dispatch. High skips triage if the response window is tight.
 
 ### Stage 3: Tenant Responsibility Check
 
@@ -187,7 +186,7 @@ Vendor selection considers, in priority order:
 
 **Lock and deadbolt work:** Prefer a handyman over a locksmith for standard deadbolt or lock hardware replacement — handymen are typically less expensive and can handle most residential lock hardware. Route to a locksmith only when: rekeying is required, the lock mechanism has failed in a way the handyman cannot replace (e.g., mortise locks, smart lock integration), or it is an after-hours emergency requiring immediate response.
 
-Before dispatching, check `references/decision-logic/owner-approval-rules.md`. If the estimated cost exceeds the property's NTE, request owner approval before dispatch. Do not auto-dispatch above NTE unless the job is Critical or Emergency severity and the configured rules explicitly permit auto-dispatch in those cases.
+Before dispatching, check `references/decision-logic/owner-approval-rules.md`. If the estimated cost exceeds the property's NTE, request owner approval before dispatch. Do not auto-dispatch above NTE unless the job is Emergency severity and the configured rules explicitly permit auto-dispatch in those cases.
 
 ### Stage 6: Dispatch and Scheduling
 
@@ -399,7 +398,7 @@ Agent immediately stops the current flow, acknowledges, escalates to human coord
 
 **Precedence — custom always wins, with one life-safety check.** Whenever the custom layer conflicts with the backend, the agent follows the custom version: a rule in `custom/rules.md` overrides a backend knowledge base article or decision, and a custom file overrides its base counterpart. The backend is the default; the company's customizations take priority over it.
 
-**The one exception is life safety.** If a custom rule or override would conflict with a life-safety instruction in the backend — the Critical/Emergency life-safety cases defined in `references/decision-logic/severity-classification.md` and `emergency-classification.md` (e.g. gas, carbon monoxide, fire, electrical hazard, major flooding, or an evacuate/escalate directive) — the agent must **not** silently apply the change. It first double-checks with a human (the property manager, or the human maintenance coordinator) that the downgrade is intended, per `references/decision-logic/escalation-criteria.md`. If they confirm it is intended, follow the custom version. If it cannot confirm, fall back to the backend's life-safety behavior and escalate. The point is that a careless or mistaken custom rule can never silently suppress an emergency response.
+**The one exception is life safety.** If a custom rule or override would conflict with a life-safety instruction in the backend — the Emergency (life-safety) cases defined in `references/decision-logic/severity-classification.md` and `emergency-classification.md` (e.g. gas, carbon monoxide, fire, electrical hazard, major flooding, or an evacuate/escalate directive) — the agent must **not** silently apply the change. It first double-checks with a human (the property manager, or the human maintenance coordinator) that the downgrade is intended, per `references/decision-logic/escalation-criteria.md`. If they confirm it is intended, follow the custom version. If it cannot confirm, fall back to the backend's life-safety behavior and escalate. The point is that a careless or mistaken custom rule can never silently suppress an emergency response.
 
 The test for which one you need: **are you modifying knowledge that already exists, or adding knowledge that doesn't?**
 
@@ -428,7 +427,7 @@ Available resources:
 - `assets/config.defaults.yaml` — out-of-the-box defaults, used when config.yaml is missing or incomplete
 - `references/knowledge-base/` — categorized troubleshooting entries (plumbing, electrical, HVAC, appliances, general). Each entry includes symptoms, intake questions, diagnostic tree, tenant-fixable steps, dispatch criteria, and vendor category.
 - `references/decision-logic/categorization-guide.md` — how to assign a category (which determines the trade), handle multi-item work orders, and decide when a report is Needs More Information vs. an escalation. Used in Stage 1.
-- `references/decision-logic/severity-classification.md` — how to classify severity level (6 levels: Critical, Emergency, High, Medium, Low, Cosmetic)
+- `references/decision-logic/severity-classification.md` — how to classify severity level (5 levels: Emergency, High, Medium, Low, Cosmetic)
 - `references/decision-logic/emergency-classification.md` — legacy reference for life-safety classification criteria and immediate safety instructions
 - `references/decision-logic/tenant-responsibility-matrix.md` — who pays for what
 - `references/decision-logic/habitability-response-windows.md` — legal response clocks by US state

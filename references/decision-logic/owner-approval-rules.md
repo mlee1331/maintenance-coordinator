@@ -12,7 +12,7 @@ If no NTE was configured during onboarding, default to a conservative approach: 
 
 Dispatch without owner approval when:
 
-- The issue is classified as Emergency or Critical severity (dispatch immediately, notify PM/owner after)
+- The issue is classified as Emergency severity (dispatch immediately, notify PM/owner after)
 - The issue is High severity (habitability) with a tight response window and the expected cost is within NTE
 - The expected repair cost is clearly within the NTE threshold (routine service calls, standard repairs)
 - The company's onboarding config explicitly grants blanket approval for certain categories (some companies pre-approve all plumbing calls under a set amount, for example)
@@ -50,14 +50,14 @@ When a vendor recommends replacement over repair:
 
 ## Emergency Overrides
 
-In Emergency or Critical severity situations, the coordinator is authorized to:
+In Emergency severity situations, the coordinator is authorized to:
 
 - Dispatch any available emergency vendor without owner approval
 - Authorize reasonable emergency repairs without NTE check
 - Authorize emergency board-up, lockout resolution, or temporary measures
 - Notify the PM/owner after the fact
 
-This applies to both life-safety (Critical) and active property damage situations (Emergency). See `severity-classification.md` for the full definitions and examples.
+This applies to both life-safety and active property-damage situations — both are Emergency. See `severity-classification.md` for the full definitions and examples.
 
 The coordinator should still document the cost and notify the owner as soon as possible after the emergency is handled.
 

@@ -7,7 +7,6 @@ Six severity levels for every incoming work order. The severity drives response 
 | Severity | Response Time | Triage? | Owner Approval? | Dispatch |
 |---|---|---|---|---|
 | Emergency | Immediate | No | No | Immediate, any available vendor |
-| Critical | Immediate | No | No | Immediate |
 | High | Same day | No | Only if over NTE | Within hours |
 | Medium | 24-48 hours | Yes | Yes, per normal rules | Within 1-2 days |
 | Low | 3-7 business days | Yes | Yes, per normal rules | Scheduled |
@@ -17,13 +16,25 @@ Six severity levels for every incoming work order. The severity drives response 
 
 ### Emergency
 
-Something is actively going wrong and every hour of delay makes the damage worse or the repair more expensive. This is not "inconvenient." This is "the property is being damaged right now, or will be very soon."
+The top, immediate-response level. An issue is **Emergency** if either is true: **(a)** life, health, or safety is at immediate risk — someone could get hurt right now (evacuate / call 911); or **(b)** something is actively going wrong where every hour of delay makes the damage worse or the repair more expensive. (Life-safety cases were formerly a separate "Critical" level; they are now Emergency. See `emergency-classification.md` for the full life-safety criteria and immediate safety instructions.)
 
-The test: **If I wait until tomorrow, will the damage or cost be significantly worse?** If yes, it's an emergency.
+The test: **Could someone get hurt, or — if I wait until tomorrow — will the damage or cost be significantly worse?** If yes, it's an Emergency.
 
 No triage. No owner approval. No waiting on estimates. Dispatch immediately.
 
-Examples:
+Examples — life, health, or safety:
+
+- Fire or active smoke
+- Gas leak (natural gas or propane)
+- Carbon monoxide alarm sounding
+- Flooding with electrical exposure risk
+- Sewage in the living space
+- No heat at or below 32F with no warming forecast
+- Structural failure (ceiling sagging, wall buckling, floor giving way)
+- Electrical sparking, arcing, or burning smell from outlets/panels
+- Tenant feels unsafe in the unit due to a maintenance condition
+
+Examples — active property damage:
 
 - Broken water supply line, even if the water has been shut off. The pipe is still broken. The tenant or property may be without water service. The ground, walls, or subfloor may already be damaged.
 - Active water intrusion from a roof leak, failed flashing, or broken gutter during rain or with rain in the forecast.
@@ -41,36 +52,11 @@ Examples:
 
 Actions:
 
-1. Do not attempt triage. This needs a professional.
-2. Dispatch immediately. No owner approval needed regardless of NTE.
-3. Notify the owner/PM after dispatch. This is a courtesy notification, not an approval request.
-4. Request photos from the tenant if not already provided.
-5. Confirm with the tenant that help is on the way.
-
-### Critical
-
-Immediate risk to life, health, or safety. Someone could get hurt right now. This is the level where you tell tenants to evacuate and call 911.
-
-Also referred to as "life-safety" in `emergency-classification.md`. See that file for the full classification criteria and immediate safety instructions.
-
-Examples:
-
-- Fire or active smoke
-- Gas leak (natural gas or propane)
-- Carbon monoxide alarm sounding
-- Flooding with electrical exposure risk
-- Sewage in living space
-- No heat at or below 32F with no warming forecast
-- Structural failure (ceiling sagging, wall buckling, floor giving way)
-- Electrical sparking, arcing, or burning smell from outlets/panels
-- Tenant feels unsafe in the unit due to a maintenance condition
-
-Actions:
-
-1. Advise the tenant on safety (evacuate if needed, call 911 if appropriate).
-2. Dispatch emergency vendor immediately. No owner approval regardless of NTE.
-3. Notify PM by the fastest available channel.
-4. Log safety advice given.
+1. If life-safety is involved, advise the tenant immediately (evacuate if needed, call 911 if appropriate).
+2. Do not attempt triage. This needs a professional. Dispatch immediately — no owner approval regardless of NTE.
+3. Notify the owner/PM after dispatch (use the fastest channel for life-safety). This is a courtesy notification, not an approval request.
+4. Request photos from the tenant if not already provided and it is safe to do so.
+5. Confirm with the tenant that help is on the way; log any safety advice given.
 
 ### High
 
