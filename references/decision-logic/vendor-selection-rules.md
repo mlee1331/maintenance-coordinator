@@ -27,7 +27,7 @@ Use a licensed plumber, electrician, or HVAC tech when:
 - **Plumber**: main line issues, water heater repair/replacement, pipe repair inside walls, sewer line work, backflow prevention, anything requiring permits
 - **Electrician**: panel work, wiring repair, new circuit installation, repeated breaker trips with no clear cause, anything behind the dead front cover
 - **HVAC technician**: system diagnosis and repair (furnace, heat pump, central AC), refrigerant work, compressor/motor replacement, ductwork. NOT for a filter change or thermostat battery — those are tenant/handyman tasks listed above.
-- **Appliance repair tech**: internal mechanical failures (compressor, motor, control board, sealed systems, gas valve solenoid)
+- **Appliance repair tech**: internal mechanical failures (compressor, motor, control board, sealed systems, gas valve solenoid). First weigh repair vs. replace by the appliance's **age** — an old appliance is often cheaper to replace than repair (see `knowledge-base/appliances/repair-vs-replace.md`); replacement needs owner approval.
 
 ### 3. Specialty Vendor (Specific Situations)
 
