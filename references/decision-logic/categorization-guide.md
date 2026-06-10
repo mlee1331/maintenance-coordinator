@@ -26,7 +26,7 @@ This is the **backend common layer** — these rules apply to every property man
 | **Property/Common Area** | Property staff or appropriate trade | Parking, dumpsters, trash, shared-area issues. |
 | **Administrative** | No vendor needed | Insurance questions, billing, pet applications, lease questions. Route to office. |
 | **Needs More Information** | None yet | The original report alone is genuinely ambiguous and cannot be routed to a trade without more information. Do not guess. Ask the tenant a clarifying question first, then categorize. See "Diagnose from the original report only" below. |
-| **Multiple** | Escalate — a human coordinates the trades | A multi-item work order whose distinct items require **two or more different vendor types** (e.g. a handyman task plus a plumber task). It is not a single automated dispatch — one person must coordinate the separate vendors, sequencing, and any owner approval. Set `escalate=true` and `multi_item=true`, set `vendor_type` to `general`, and list every item with the trade it needs. A multi-item WO whose items are all **one** trade does NOT use this — classify it by that trade (see the multi-item rule below). |
+| **Multiple** | Escalate — a human coordinates the trades | A multi-item work order whose distinct items require **two or more different vendor types** (e.g. a handyman task plus a plumber task). It is not a single automated dispatch — one person must coordinate the separate vendors, sequencing, and any owner approval. Set `escalate=true` and `multi_item=true`, set `vendor_type` to `N/A`, and list every item with the trade it needs. A multi-item WO whose items are all **one** trade does NOT use this — classify it by that trade (see the multi-item rule below). |
 
 ## Category is the domain; the dispatched trade is a separate decision
 
@@ -115,7 +115,7 @@ That is four distinct issues (pest, water pressure, toilet, shower) with no numb
 Rule — decide by how many distinct **vendor types (trades)** the items need. Read each item, decide its trade (see `vendor-selection-rules.md`), then count the distinct trades:
 
 - **All items need the same single vendor type** → classify by the **first item's category**, add `multi_item: true`, and dispatch that one vendor for the whole visit. Do not escalate. (If every item is handyman work, the category is **General** — unless the first item carries a more specific category that still routes to a handyman, e.g. Safety/Detector, in which case keep the first item's category.)
-- **The items span two or more different vendor types** (e.g. a handyman task plus a plumber task, or a pest job plus a plumbing job) → category is **Multiple**, with `multi_item: true` and `escalate: true`. A multi-trade work order is not a single automated dispatch: a human coordinates the separate vendors, sequencing, and any owner approval. Set `vendor_type` to `general` and list every item with the trade it needs in the escalation notes.
+- **The items span two or more different vendor types** (e.g. a handyman task plus a plumber task, or a pest job plus a plumbing job) → category is **Multiple**, with `multi_item: true` and `escalate: true`. A multi-trade work order is not a single automated dispatch: a human coordinates the separate vendors, sequencing, and any owner approval. Set `vendor_type` to `N/A` and list every item with the trade it needs in the escalation notes.
 
 Examples:
 - "1. Smoke alarm going off. 2. Fix screen door." → both are handyman work → one vendor type → **Safety/Detector** (first item) + `multi_item: true`, no escalation.

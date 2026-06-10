@@ -33,6 +33,7 @@ Examples:
 - Sewer line blockage affecting the entire unit (all drains backing up, not just one slow drain).
 - HVAC failure with extreme weather in the forecast (heat index above 100F or windchill below 10F within 24 hours), even if current conditions aren't at the habitability threshold yet.
 - Significant appliance failure creating active damage (refrigerator leaking onto hardwood, dishwasher flooding the kitchen).
+- Water pouring or gushing from a ceiling or overhead — e.g., a burst supply line in the floor above — especially with the ceiling sagging, bulging, or collapsing. Active interior flooding plus structural damage; every hour makes it worse.
 - Exterior door or gate that cannot be secured after storm damage or attempted break-in.
 - Tree or large branch fallen on the property, blocking access, damaging the structure, or threatening further damage.
 - Garage door stuck open overnight or with severe weather coming.
@@ -102,7 +103,7 @@ Significant inconvenience or risk of property damage if not addressed soon. Coul
 Examples:
 
 - AC not working during high heat (in jurisdictions where AC is NOT a habitability requirement)
-- Slow but active water leak (under sink, from ceiling, around toilet base). Not a drip. Water going somewhere it shouldn't.
+- Slow but active water leak (under sink, a slow seep from a ceiling, around toilet base). Not a drip, not pouring. Water going somewhere it shouldn't. (Water *pouring* or *gushing* from a ceiling, or a ceiling sagging/collapsing, is **Emergency** — see above.)
 - Single broken window pane with weather exposure but security not compromised
 - Active pest infestation the tenant just discovered (roaches, mice, bedbugs, not "I saw one ant")
 - One toilet out of service in a multi-toilet unit
