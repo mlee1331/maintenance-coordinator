@@ -41,14 +41,13 @@ Use a licensed plumber, electrician, or HVAC tech when:
 - **Landscaping / grounds**: lawn mowing, overgrowth, tree and shrub trimming, leaf and debris removal, seasonal cleanup, and snow removal where applicable. Use for routine grounds upkeep, not for irrigation/sprinkler plumbing (that is a plumber) or exterior structural work.
 - **Roofing company**: roof leaks, missing/lifted/damaged shingles or tiles, flashing, and roof-tied gutters. Roof work is a licensed specialty and is not a handyman job; it frequently exceeds NTE, so get owner approval per `owner-approval-rules.md` unless an active leak makes it an emergency.
 
-## When no single trade applies: N/A and unknown
+## When no single trade applies: N/A, unknown, and multiple
 
-Not every work order results in a trade dispatch. Two non-trade outcomes:
+Not every work order maps to one trade dispatch. Three non-single-trade outcomes:
 
 - **N/A — no vendor is needed.** The item is **tenant-responsible** (e.g., a routine smoke-detector battery — see `tenant-responsibility-matrix.md`) or it is an **office/administrative** matter with no repair (insurance, billing, lease, pet applications). Do not dispatch. Responsibility routing (tenant or office) handles it.
 - **unknown — a vendor is needed but no trade in this list matches.** Examples: a heating-oil/propane/fuel **delivery**, a building **access-control / key-fob / intercom** system, an elevator. Do **not** force-fit a wrong trade (a key-fob system is not a locksmith; a fuel delivery is not HVAC). Set the dispatch to **unknown** and **escalate to a human** to source the right specialty vendor.
-
-A multi-trade work order (category **Multiple**) also uses `vendor_type` **N/A**, because no single vendor covers it — the escalation notes list the trades and a human coordinates them.
+- **multiple — the work order needs two or more different trades.** This is the **Multiple** category: a multi-trade job that needs several vendors (e.g., a plumber and a handyman). Set `vendor_type` to **multiple** and **escalate** — the escalation notes list each trade, and a human coordinates the separate dispatches and sequencing. (Use this, not N/A: a multi-trade WO does need vendors — just more than one.)
 
 ## Selection Within a Category
 
