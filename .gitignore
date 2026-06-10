@@ -1,7 +1,35 @@
+# OS / editor cruft
 .DS_Store
+**/.DS_Store
+*.swp
+Thumbs.db
+
+# Secrets / environment — never commit
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+secrets.*
+credentials.*
+
+# Agent / local instruction files
+CLAUDE.md
+AGENTS.local.md
+NOTES.md
+
+# Operator-specific data & customization (private per deployment)
 assets/config.yaml
 custom/*
 !custom/README.md
-CLAUDE.md
-NOTES.md
 docs/design-conversation.md
+
+# Test data / eval harness (private — real resident data; never publish)
+*.csv
+**/round*_corrections*.json
+**/round*_predictions*.json
+**/round*_picks*.json
+**/seen_wos.json
+evals_golden/
