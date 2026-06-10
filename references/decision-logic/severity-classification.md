@@ -18,7 +18,7 @@ Six severity levels for every incoming work order. The severity drives response 
 
 The top, immediate-response level. An issue is **Emergency** if either is true: **(a)** life, health, or safety is at immediate risk — someone could get hurt right now (evacuate / call 911); or **(b)** something is actively going wrong where every hour of delay makes the damage worse or the repair more expensive. (Life-safety cases were formerly a separate "Critical" level; they are now Emergency. See `emergency-classification.md` for the full life-safety criteria and immediate safety instructions.)
 
-The test: **Could someone get hurt, or — if I wait until tomorrow — will the damage or cost be significantly worse?** If yes, it's an Emergency.
+The test: **Could someone get hurt, or — if I wait until tomorrow — will the damage or cost be significantly worse?** If yes, it's an Emergency. If the acute event has already happened and what remains is damaged but **stable** — not imminently dangerous and not actively worsening — classify it **High**, not Emergency.
 
 No triage. No owner approval. No waiting on estimates. Dispatch immediately.
 
@@ -46,7 +46,7 @@ Examples — active property damage:
 - Significant appliance failure creating active damage (refrigerator leaking onto hardwood, dishwasher flooding the kitchen).
 - Water pouring or gushing from a ceiling or overhead — e.g., a burst supply line in the floor above — especially with the ceiling sagging, bulging, or collapsing. Active interior flooding plus structural damage; every hour makes it worse.
 - Exterior door or gate that cannot be secured after storm damage or attempted break-in.
-- Tree or large branch fallen on the property, blocking access, damaging the structure, or threatening further damage.
+- Tree or large branch **actively or imminently threatening** — a limb hanging over an entrance or the structure, a tree leaning on the unit, or a fall that is blocking access or causing ongoing damage right now. (A tree that has already dropped a limb and is damaged but **stable** — not imminently dangerous — is **High**, not Emergency.)
 - Garage door stuck open overnight or with severe weather coming.
 - Electrical panel tripped and won't reset, affecting major systems (HVAC, water heater, refrigerator) but not the entire unit.
 
