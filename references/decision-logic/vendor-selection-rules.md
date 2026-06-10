@@ -16,6 +16,7 @@ Handymen are cheaper than licensed specialists and can handle a wide range of co
 
 - **Plumbing**: faucet repair/replacement, toilet internals (flapper, fill valve, handle), wax ring replacement, P-trap tightening/replacement, supply line replacement, garbage disposal swap, simple drain snaking at a single fixture
 - **Electrical**: GFCI outlet replacement, outlet/switch swap, breaker identification and diagnosis, smoke detector replacement, exhaust fan replacement (existing wiring)
+- **HVAC**: filter replacement or cleaning, thermostat battery, clearing a blocked return/register — routine no-tools tasks. A dirty or clogged filter is a handyman job (and often a tenant responsibility per the lease — see `tenant-responsibility-matrix.md`). Send an HVAC tech only when the system itself is malfunctioning.
 - **Appliances**: door latches, power supply troubleshooting, dryer vent cleaning, disposal replacement
 - **General**: lock changes (non-emergency), door alignment, window hardware, screen replacement, caulking, minor drywall repair
 
@@ -25,7 +26,7 @@ Use a licensed plumber, electrician, or HVAC tech when:
 
 - **Plumber**: main line issues, water heater repair/replacement, pipe repair inside walls, sewer line work, backflow prevention, anything requiring permits
 - **Electrician**: panel work, wiring repair, new circuit installation, repeated breaker trips with no clear cause, anything behind the dead front cover
-- **HVAC technician**: system diagnosis and repair (furnace, heat pump, central AC), refrigerant work, compressor/motor replacement, ductwork
+- **HVAC technician**: system diagnosis and repair (furnace, heat pump, central AC), refrigerant work, compressor/motor replacement, ductwork. NOT for a filter change or thermostat battery — those are handyman/tenant tasks listed above.
 - **Appliance repair tech**: internal mechanical failures (compressor, motor, control board, sealed systems, gas valve solenoid)
 
 ### 3. Specialty Vendor (Specific Situations)
