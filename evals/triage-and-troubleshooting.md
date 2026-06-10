@@ -94,7 +94,7 @@
 
 **Expected behavior**:
 1. Classify as urgent (repeated breaker trips suggest an underlying issue, potential fire risk if ignored).
-2. Safety screen: any burning smell? Any outlets hot to the touch? Sparking? If yes to any, reclassify as Critical.
+2. Safety screen: any burning smell? Any outlets hot to the touch? Sparking? If yes to any, reclassify as Emergency.
 3. Triage: what's plugged into that circuit? Ask the tenant to unplug everything on that circuit and reset the breaker. If it stays on with nothing plugged in, one of the devices is the problem. Have them plug things back in one at a time.
 4. If the breaker trips with nothing plugged in, stop troubleshooting. This is a wiring issue. Dispatch licensed electrician (not handyman, repeated trips with no load is an electrical system problem).
 5. If a specific device causes the trip, that's the tenant's appliance (probably). Note it, advise the tenant not to use that device, and classify as resolved unless the tenant wants a vendor to check the circuit anyway.

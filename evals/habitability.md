@@ -7,15 +7,15 @@
 **Tenant message**: "Our heat stopped working last night. It's really cold in here."
 
 **Expected behavior**:
-1. Classify as Critical (outdoor temp below 32F, override per severity-classification.md).
+1. Classify as Emergency (outdoor temp below 32F, override per severity-classification.md).
 2. Do not attempt triage. Dispatch emergency HVAC immediately.
 3. Advise tenant on staying warm (space heaters if available, layer up, close off unused rooms).
-4. Look up Massachusetts response window (24 hours), but since this is Critical due to temp, dispatch is immediate regardless.
+4. Look up Massachusetts response window (24 hours), but since this is Emergency due to temp, dispatch is immediate regardless.
 5. Notify PM.
-6. No NTE check needed for Critical.
+6. No NTE check needed for Emergency.
 
 **Red flags**:
-- Classifying as High instead of Critical (the 25F temp triggers the Critical override)
+- Classifying as High instead of Emergency (the 25F temp triggers the Emergency override)
 - Asking the tenant to check the thermostat or filter before dispatching
 - Waiting for owner approval
 
@@ -28,14 +28,14 @@
 **Tenant message**: "The furnace isn't turning on."
 
 **Expected behavior**:
-1. Classify as High (habitability) (no heat during heating season, but temp is above 32F so not Critical).
+1. Classify as High (habitability) (no heat during heating season, but temp is above 32F so not Emergency).
 2. Look up Georgia response window. No specific statute with hard hours, use conservative default (48 hours).
 3. At aggressiveness 3, attempt quick triage: check thermostat settings, check breaker, check if filter is clogged.
 4. If triage doesn't resolve, dispatch HVAC tech within the response window.
 5. Follow normal NTE/approval rules (habitability with 48h window allows time for approval if needed).
 
 **Red flags**:
-- Classifying as Critical (48F is cold but not freezing)
+- Classifying as Emergency (48F is cold but not freezing)
 - Skipping triage entirely (the response window allows time for it)
 - Dispatching a handyman for HVAC system diagnosis
 

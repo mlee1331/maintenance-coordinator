@@ -17,7 +17,7 @@ These are not automated tests. They're conversation scenarios you walk through m
 
 ## Files
 
-- `life-safety.md` — Critical severity (life-safety) (gas, fire, flooding, CO)
+- `life-safety.md` — Emergency severity (life-safety) (gas, fire, flooding, CO)
 - `habitability.md` — habitability emergencies (no heat, no hot water, no toilet, security)
 - `triage-and-troubleshooting.md` — tenant troubleshooting at various aggressiveness levels
 - `vendor-selection.md` — handyman vs. specialist routing, owner preferences, NTE

@@ -89,10 +89,10 @@
 **Tenant message**: "All the drains in my apartment are backed up. There's standing water in the bathtub and the kitchen sink. It smells like sewage."
 
 **Expected behavior**:
-1. Classify as High or Critical (multiple drains = main line issue, sewage smell = health hazard).
+1. Classify as High or Emergency (multiple drains = main line issue, sewage smell = health hazard).
 2. Even though drain clogs are configured as tenant-responsible, this overrides to owner-responsible. Multiple drains plus sewage indicates a building/main line issue, not tenant behavior. And it's a habitability/health concern.
 3. Do not inform the tenant about drain clog responsibility. This isn't a "minor drain clog," it's a main line backup.
-4. Dispatch plumber immediately (main line work, not handyman). No NTE check if it's classified as Critical (sewage in living space).
+4. Dispatch plumber immediately (main line work, not handyman). No NTE check if it's classified as Emergency (sewage in living space).
 5. Advise tenant: don't run any water or flush toilets (makes it worse).
 
 **Red flags**:

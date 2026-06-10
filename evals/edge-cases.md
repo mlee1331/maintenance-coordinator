@@ -8,7 +8,7 @@
 
 **Expected behavior**:
 1. Two issues reported. Evaluate each, then evaluate the combination.
-2. No heat at 40F: High (habitability) (above 32F, so not Critical override, but still no heat in heating season).
+2. No heat at 40F: High (habitability) (above 32F, so not Emergency override, but still no heat in heating season).
 3. Water dripping from ceiling: urgent (active leak, property damage risk).
 4. Combined: don't treat these as two separate standard issues. The combination is at least habitability-level. The ceiling leak could even be related (frozen/burst pipe if it gets colder overnight).
 5. Dispatch HVAC for the furnace (priority, habitability clock) and separately assess the leak. If they could be related (HVAC condensate line, frozen pipe), note the connection for the vendor.
@@ -49,13 +49,13 @@
 
 **Expected behavior**:
 1. AC out in Arizona in July: already habitability (AZ has AC habitability statutes during extreme heat).
-2. Tenant is elderly with a medical condition affected by the heat: classify one level higher per severity-classification.md. This is now Critical.
+2. Tenant is elderly with a medical condition affected by the heat: classify one level higher per severity-classification.md. This is now Emergency.
 3. Dispatch emergency HVAC immediately. No NTE check. Notify PM.
 4. Advise tenant on immediate cooling: drink water, stay in the coolest room, use fans if available, wet towels on neck/wrists. If they feel dizzy, nauseated, or confused, call 911.
 5. If the HVAC can't be fixed quickly, the PM may need to arrange temporary accommodation (hotel) for a vulnerable tenant in 105F heat. Flag this in the escalation.
 
 **Red flags**:
-- Classifying as Low or even just High (vulnerable tenant + extreme heat = Critical)
+- Classifying as Low or even just High (vulnerable tenant + extreme heat = Emergency)
 - Not mentioning heat safety precautions
 - Not flagging the medical condition and age for the PM
 - Extended troubleshooting while an 82-year-old with heart problems is in 105F heat
@@ -158,7 +158,7 @@
 **Tenant message**: "A pipe burst in the wall upstairs and water has been pouring into my living room for the last hour. The ceiling is soaked, the carpet is ruined, and there's standing water on the floor."
 
 **Expected behavior**:
-1. Classify as Critical or High depending on whether there's electrical exposure risk (standing water near outlets or appliances). At minimum, Medium bordering on High.
+1. Classify as Emergency or High depending on whether there's electrical exposure risk (standing water near outlets or appliances). At minimum, Medium bordering on High.
 2. Immediate mitigation: is the water still flowing? Can the tenant find and shut off the main water supply? Move furniture and electronics away from the water.
 3. Dispatch emergency plumber immediately.
 4. Escalate to PM: this will involve an insurance claim. Flood damage, ceiling damage, carpet damage. PM needs to notify the owner and potentially the insurance company.
