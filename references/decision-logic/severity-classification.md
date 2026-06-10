@@ -31,7 +31,7 @@ Examples — life, health, or safety:
 - Sewage in the living space
 - No heat at or below 32F with no warming forecast
 - Structural failure (ceiling sagging, wall buckling, floor giving way)
-- Electrical sparking, arcing, or burning smell from outlets/panels
+- **Active or ongoing** electrical arcing, sparking, burning smell, smoke, scorch marks, or an outlet/panel warm to the touch — a fire risk right now. (A one-time spark when plugging something in, with no ongoing arcing or burning and where the tenant can simply stop using that outlet, is **High**, not Emergency — see below.)
 - Tenant feels unsafe in the unit due to a maintenance condition
 
 Examples — active property damage:
@@ -72,6 +72,7 @@ Examples:
 - Major water leak actively causing damage or will cause damage within hours
 - Broken exterior door or window that can't lock or close (security compromised)
 - Electrical failure affecting the entire unit
+- An outlet that sparked on plug-in but is **not** actively arcing or burning — a serious electrical fault. Advise the tenant to stop using that outlet; dispatch urgently, but it is High (avoidable, not an active fire), not Emergency.
 - Inoperable hardwired smoke detectors the tenant can't fix themselves
 - AC failure in jurisdictions that treat cooling as habitability (check the statute)
 
