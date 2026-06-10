@@ -18,7 +18,7 @@ Six severity levels for every incoming work order. The severity drives response 
 
 The top, immediate-response level. An issue is **Emergency** if either is true: **(a)** life, health, or safety is at immediate risk — someone could get hurt right now (evacuate / call 911); or **(b)** something is actively going wrong where every hour of delay makes the damage worse or the repair more expensive. (Life-safety cases were formerly a separate "Critical" level; they are now Emergency. See `emergency-classification.md` for the full life-safety criteria and immediate safety instructions.)
 
-The test: **Could someone get hurt, or — if I wait until tomorrow — will the damage or cost be significantly worse?** If yes, it's an Emergency. If the acute event has already happened and what remains is damaged but **stable** — not imminently dangerous and not actively worsening — classify it **High**, not Emergency.
+The test: **Could someone get hurt, or — if I wait until tomorrow — will the damage or cost be significantly worse?** If yes, it's an Emergency. If the acute event has already happened and what remains is damaged but **stable** — not imminently dangerous and not actively worsening — classify it **High**, not Emergency. Likewise, a problem that only flares under a condition that isn't present right now (e.g., a roof that leaks only when it rains, with no rain now or imminent) is **High** until that condition is active.
 
 No triage. No owner approval. No waiting on estimates. Dispatch immediately.
 
@@ -37,7 +37,7 @@ Examples — life, health, or safety:
 Examples — active property damage:
 
 - Broken water supply line, even if the water has been shut off. The pipe is still broken. The tenant or property may be without water service. The ground, walls, or subfloor may already be damaged.
-- Active water intrusion from a roof leak, failed flashing, or broken gutter during rain or with rain in the forecast.
+- Active water intrusion from a roof leak, failed flashing, or broken gutter — water **coming in right now** during rain, or with rain **imminent**. (A known roof leak that only leaks when it rains but is **not currently leaking**, with no imminent rain, is **High** — dispatch urgently, but it is not an active emergency until water is coming in.)
 - Water heater actively leaking or ruptured (not condensation, actual tank failure).
 - Sump pump failure during wet conditions or with rain in the forecast.
 - Burst or frozen pipe that's been shut off but not repaired. The break still exists.
@@ -70,6 +70,7 @@ Examples:
 - No working toilet (single-toilet unit)
 - Refrigerator completely non-functional with food loss risk
 - Major water leak actively causing damage or will cause damage within hours
+- A known roof or ceiling leak that recurs with rain but is **not actively leaking now** (and no imminent rain). Serious — dispatch urgently — but High until water is actively coming in.
 - Broken exterior door or window that can't lock or close (security compromised)
 - Electrical failure affecting the entire unit
 - An outlet that sparked on plug-in but is **not** actively arcing or burning — a serious electrical fault. Advise the tenant to stop using that outlet; dispatch urgently, but it is High (avoidable, not an active fire), not Emergency.
