@@ -26,6 +26,7 @@ This is the **backend common layer** — these rules apply to every property man
 | **Property/Common Area** | Property staff or appropriate trade | Parking, dumpsters, trash, shared-area issues. |
 | **Administrative** | No vendor needed | Insurance questions, billing, pet applications, lease questions. Route to office. |
 | **Needs More Information** | None yet | The original report alone is genuinely ambiguous and cannot be routed to a trade without more information. Do not guess. Ask the tenant a clarifying question first, then categorize. See "Diagnose from the original report only" below. |
+| **Multiple** | Escalate — a human coordinates the trades | A multi-item work order whose distinct items require **two or more different vendor types** (e.g. a handyman task plus a plumber task). It is not a single automated dispatch — one person must coordinate the separate vendors, sequencing, and any owner approval. Set `escalate=true` and `multi_item=true`, set `vendor_type` to `general`, and list every item with the trade it needs. A multi-item WO whose items are all **one** trade does NOT use this — classify it by that trade (see the multi-item rule below). |
 
 ## Category is the domain; the dispatched trade is a separate decision
 
@@ -111,15 +112,16 @@ Example of an unnumbered multi-item WO:
 
 That is four distinct issues (pest, water pressure, toilet, shower) with no numbering — it is multi-item.
 
-Rule:
-- **Classify by the first item.** Add a `multi_item: true` flag and list all the items in the work order notes.
-- **If the first item is handyman-grade** (Door/Lock/Window, Interior/Cosmetic, or General-equivalent), the whole WO routes to **General**. One handyman visit handles all items.
-- **If the first item is specialist** (HVAC, Plumbing, Electrical, Appliance, Pest, Mold, Safety/Detector, Structural/Exterior, Grounds), use that specialist category. The handyman items in the same WO either get added to the same visit if possible, or get scheduled as a follow-up.
+Rule — decide by how many distinct **vendor types (trades)** the items need. Read each item, decide its trade (see `vendor-selection-rules.md`), then count the distinct trades:
+
+- **All items need the same single vendor type** → classify by the **first item's category**, add `multi_item: true`, and dispatch that one vendor for the whole visit. Do not escalate. (If every item is handyman work, the category is **General** — unless the first item carries a more specific category that still routes to a handyman, e.g. Safety/Detector, in which case keep the first item's category.)
+- **The items span two or more different vendor types** (e.g. a handyman task plus a plumber task, or a pest job plus a plumbing job) → category is **Multiple**, with `multi_item: true` and `escalate: true`. A multi-trade work order is not a single automated dispatch: a human coordinates the separate vendors, sequencing, and any owner approval. Set `vendor_type` to `general` and list every item with the trade it needs in the escalation notes.
 
 Examples:
-- "1. Smoke alarm going off. 2. Fix screen door." → **Safety/Detector** (specialist first item) + multi_item flag.
-- "1. Front screen door doesn't close. 2. Back screen door doesn't close. 3. Bathroom door sticks. 4. Fridge needs leveling." → **General** (first item is handyman-grade; one handyman handles all four).
-- "Mice droppings... Weak water pressure... Toilet hot water only... Shower weak." → **Pest** (first item) + multi_item flag, even with no numbering.
+- "1. Smoke alarm going off. 2. Fix screen door." → both are handyman work → one vendor type → **Safety/Detector** (first item) + `multi_item: true`, no escalation.
+- "1. Front screen door doesn't close. 2. Back screen door doesn't close. 3. Bathroom door sticks. 4. Fridge needs leveling." → all handyman → one vendor type → **General** + `multi_item: true`.
+- "Mice droppings... Weak water pressure... Toilet hot water only... Shower weak." → pest control **plus** plumbing → two vendor types → **Multiple** + `multi_item: true` + `escalate: true`.
+- "Remove the old vanity and run new water lines, then patch and paint the wall." → plumber **plus** handyman → two vendor types → **Multiple** + `escalate: true`.
 
 ### 3. Action verb override
 

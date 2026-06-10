@@ -32,6 +32,7 @@ These situations require PM involvement regardless of other factors:
 - Same issue reported three or more times at the same unit within 90 days (recurring problem, root cause needs investigation)
 - Multiple tenants in the same building reporting the same issue simultaneously (building-wide problem)
 - Issue requires access to a unit where the tenant is unresponsive and the repair is urgent
+- **A multi-item work order whose distinct items require two or more different vendor types (trades)** — e.g. a handyman task plus a plumber task. It is not a single dispatch: a human coordinates the separate vendors, sequencing, and any owner approval. Category is **Multiple** (see `categorization-guide.md`). A multi-item WO whose items are all one trade does NOT escalate — classify and dispatch it normally.
 - **The coordinator cannot route the work order to a trade AND cannot identify a single clarifying question to the tenant that would unblock it.** The original report is incoherent, internally contradictory, empty of actionable content, or outside the coordinator's competence to route. This is distinct from the askable "Needs More Information" case: if one clear tenant question would resolve the ambiguity (e.g., "is the expansion tank on your water heater or your boiler?"), ask it and stay in the automated loop — do not escalate. Escalate only when you genuinely cannot tell what to ask.
 
 ## Escalate with Context
