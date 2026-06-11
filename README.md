@@ -107,6 +107,17 @@ Core skill bundle: knowledge base, decision logic, communication patterns, schem
 - More jurisdiction coverage with statute references
 - Sample configs for common operator profiles
 
+### Future: Property Memory (a "second brain")
+
+Today the coordinator triages each work order from the tenant's report plus the company config — it doesn't remember a property's history. The next major capability is a persistent **second brain**: a per-property maintenance record the coordinator consults on every work order, so it knows the **full maintenance context of each property** and decides accordingly:
+
+- **Recurring issues** — a drain that's clogged three times stops getting band-aided and gets a root-cause fix; a repeat report escalates faster.
+- **What's already been done** — past repairs and replacements (and when), so the agent doesn't re-diagnose and can flag warranty coverage.
+- **Property-specific facts** — well pump vs. city water, oil boiler vs. gas furnace, aging wiring, a known roof leak, access quirks.
+- **Vendor history** — who's been to this property, what they found, and how it went.
+
+This turns one-off triage into context-aware coordination: the agent reasons over a property's whole maintenance history, not just the ticket in front of it — so it makes better calls.
+
 ### Future: PM Software Plugins
 
 Right now, the skill tells the agent what to do but doesn't know how to talk to any specific PM platform. The harness owner wires that up. Long-term, we want companion plugins for the major PM systems so the skill can create work orders, dispatch vendors, and pull property/tenant data natively. On the list:
