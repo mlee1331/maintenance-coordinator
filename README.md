@@ -58,7 +58,7 @@ See `docs/architecture.md` for the full overlay design.
 ## Project Structure
 
 ```
-maintenance-coordinator-skill/
+maintenance-coordinator/
 ├── SKILL.md                    # Required entry point (Agent Skills spec)
 ├── README.md                   # This file
 ├── AGENTS.md                   # Guidance for coding agents working in this repo
@@ -67,6 +67,7 @@ maintenance-coordinator-skill/
 │   ├── knowledge-base/         # Categorized troubleshooting entries
 │   ├── decision-logic/         # Categorization, severity, responsibility, vendor, escalation rules
 │   ├── communication/          # Intake questions, templates, tone, photo guides
+│   ├── onboarding/             # Optional guided setup interview
 │   └── schemas/                # Data structure definitions
 ├── custom/                     # Your overrides (gitignored, mirrors references/)
 ├── assets/                     # User-customizable templates
