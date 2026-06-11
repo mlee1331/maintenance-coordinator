@@ -8,7 +8,7 @@ A portable bundle of expertise: SKILL.md plus a knowledge base, decision logic, 
 
 - Tenant work order intake
 - Work order categorization (which trade the issue belongs to)
-- Severity triage (6 levels) with US habitability response windows
+- Severity triage (5 levels) with US habitability response windows
 - Tenant vs. owner responsibility classification
 - Tenant-side troubleshooting before dispatch (configurable aggressiveness 0-5)
 - Vendor routing and selection
