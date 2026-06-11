@@ -35,7 +35,7 @@ Works with any agent harness: Claude Desktop, Claude Code, Codex CLI, OpenClaw, 
    - **Claude Code**: place the folder at `~/.claude/skills/maintenance-coordinator/`
    - **Codex CLI**: place the folder at `~/.codex/skills/maintenance-coordinator/`
    - **Other harnesses**: point your agent at `SKILL.md` as part of its system context, give it read access to the folder
-3. Start using it. The agent works immediately with sensible defaults (NTE $500, troubleshooting level 3, warm tone, industry-standard tenant responsibility). No onboarding required.
+3. Start using it. The agent works immediately with sensible defaults (NTE $500, troubleshooting level 3, warm tone, industry-standard tenant responsibility). No onboarding required. The agent should follow the **"How to Use This Skill"** contract at the top of `SKILL.md` — above all, loading the matching `references/knowledge-base/` entry for tenant-side troubleshooting before recommending any dispatch.
 4. Customize when you're ready. Tell the agent to run setup, edit `assets/config.yaml` directly, or just change settings mid-conversation ("add Mike's Plumbing as a vendor", "set my NTE to 750"). The agent adapts on the fly.
 5. Wire your agent to your PM software, SMS provider, and vendor dispatch system using their tooling. The skill defines what data the agent works with in `references/schemas/`.
 6. Run the eval cases in `evals/` to verify behavior before going live.
